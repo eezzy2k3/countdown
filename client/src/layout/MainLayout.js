@@ -10,7 +10,8 @@ const MainLayout = () => {
   return (
     <div
       className="main__container "
-      style={{ backgroundImage: `url(${background})` }}
+      // style={{ backgroundImage: `url(${background})` }}
+     
     >
       <Outlet />
       <Footer />

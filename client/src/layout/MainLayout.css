@@ -4,8 +4,14 @@
     padding: 30px;
     display: grid;
     place-items: center;
-    background: url("../assets/images/bg.jpg");
-    background-size: cover;
+    /* background: url("../assets/images/bg.jpg"); */
+    /* background-size: cover; */
+    background: #70e1f5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main__con::after {
