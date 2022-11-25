@@ -1,4 +1,5 @@
 .main__container {
+    position: relative;
     min-height: 100vh;
     height: 100%;
     padding: 30px;
