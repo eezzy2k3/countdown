@@ -176,9 +176,6 @@ img.chevronright {
       bottom: -819%;
   } */
 
-  .modal {
-    height: 280px;
-  }
   .top__modal h4 {
     font-size: 18px;
   }
@@ -194,14 +191,14 @@ img.chevronright {
 @media screen and (max-width: 300px) {
   .wallets img {
     width: 122px;
-    height: 44px;
+    /* height: 44px; */
   }
   img.meta__img {
     width: 93px;
-    height: 44px;
+    /* height: 44px; */
   }
   img.chevronright {
     width: 20px;
-    height: 20px;
+    /* height: 20px; */
   }
 }

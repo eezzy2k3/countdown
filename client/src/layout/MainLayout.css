@@ -3,6 +3,8 @@
   height: 100%;
   padding: 30px;
   display: grid;
+
+  overflow-x: hidden;
   place-items: center;
   background: url("../assets/images/bg.jpg");
   background-size: cover;
