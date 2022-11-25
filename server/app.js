@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}))
 
 
 
-// imitializing Db
+// initializing Db
 const connectDb = require("./config/config")
 
 
