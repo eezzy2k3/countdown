@@ -9,6 +9,9 @@
   visibility: visible;
 }
 
+button.disable {
+  background-color: rgba(51, 51, 51, 0.5);
+}
 .backdrop {
   position: absolute;
   height: 100vh;
@@ -26,7 +29,7 @@
 .modal {
   min-width: 600px;
   /* width: 300px; */
-  height: 300px;
+  /* height: 300px; */
   padding: 12px 20px;
   padding-top: 0;
   overflow: hidden;
@@ -63,7 +66,7 @@
   position: absolute;
   bottom: 0;
   left: -66px;
-  border-bottom: 1px solid #80808038;
+  border-bottom: 1px solid #df0d7838;
 }
 .top__modal h4 {
   font-size: 24px;
@@ -76,12 +79,22 @@ form.flex {
   gap: 2rem;
   flex-direction: column;
 }
+textarea {
+  resize: none;
+  outline: none;
+}
 
-input#name {
+input#name,
+textarea {
   width: 100%;
   padding: 1rem 2rem;
   border: 1px solid #d5d1d1;
   border-radius: 10px;
+  color: #333;
+}
+input::placeholder,
+textarea::placeholder {
+  font-style: oblique;
 }
 
 label {
@@ -93,19 +106,30 @@ input[type="date" i] {
   border-radius: 8px;
   border: 1px solid #cdcccc;
   padding: 1rem 2rem;
+  color: #333;
 }
 .event__name.flex,
-.event__date.flex {
+.event__date.flex,
+.event__reason.flex {
   width: 100%;
-  gap: 3rem;
+  gap: 5.6rem;
   margin-bottom: 1rem;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+.event__reason.flex {
+  gap: 4.6rem;
+}
+.event__date.flex {
+  gap: 7rem;
 }
 
 .bottom__modal span {
   font-size: 16px;
 }
 
+.submit__button:hover {
+  background-color: #8a0e38;
+}
 .wallets img {
   width: 156px;
   height: 44px;

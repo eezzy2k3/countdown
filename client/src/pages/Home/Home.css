@@ -43,28 +43,36 @@ img.alarm {
 @keyframes clock {
   0% {
     transform: translateX(6px);
+    transform: rotate(0);
   }
   25% {
     transform: translateX(0px);
+    transform: rotate(45deg);
   }
   50% {
     transform: translateX(0px);
+    transform: rotate(40deg);
   }
   100% {
     transform: translateX(6px);
+    transform: rotate(0);
   }
 }
 @keyframes alarm {
   0% {
     transform: translateX(-6px);
+    transform: rotate(0);
   }
   25% {
     transform: translateX(0px);
+    transform: rotate(-45deg);
   }
   50% {
     transform: translateX(0px);
+    transform: rotate(-40deg);
   }
   100% {
     transform: translateX(-6px);
+    transform: rotate(0deg);
   }
 }

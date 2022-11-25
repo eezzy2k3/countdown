@@ -1,16 +1,55 @@
 // import { useSelector, useDispatch } from 'react-redux';
 
+import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Modal.css";
 
 const Modal = ({ open, setOpen }) => {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [value, setValue] = useState({
     name: "",
-    date: ""
+    date: "",
+    reason: ""
   });
+  // console.log(value);
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
+
+  //call api for Creating Event
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // createEvents(value);
+    const createEvents = async () => {
+      try {
+        setIsLoading(true);
+        let newDate = new Date(value.date).toLocaleDateString("us-EN", options);
+        console.log(newDate);
+
+        const request = await axios.post(
+          "https://counter-3m98.onrender.com/api/v1/countdown/",
+          {
+            eventName: value.name.toLowerCase(),
+            eventDescription: value.reason,
+            eventDate: newDate
+          }
+        );
+        if (request?.data?.success) {
+          let formatName = value.name.toLowerCase();
+          console.log(request);
+          setIsLoading(false);
+          navigate(`/${formatName}`);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    createEvents();
   };
   // const handleClose = () => {
   //   document.body.style.overflowY = "scroll";
@@ -33,10 +72,23 @@ const Modal = ({ open, setOpen }) => {
               <input
                 placeholder="Christmas"
                 value={value.name}
+                onChange={(e) => setValue({ ...value, name: e.target.value })}
                 id="name"
                 title="name"
                 required
                 type="text"
+              />
+            </div>
+
+            <div className="event__reason flex">
+              <label htmlFor="date">Reason:</label>
+              <textarea
+                placeholder="Jesus is born..."
+                value={value.reason}
+                onChange={(e) => setValue({ ...value, reason: e.target.value })}
+                id="reason"
+                title="reason"
+                required
               />
             </div>
             <div className="event__date flex">
@@ -44,13 +96,23 @@ const Modal = ({ open, setOpen }) => {
               <input
                 placeholder="Christmas"
                 value={value.date}
+                onChange={(e) =>
+                  setValue({
+                    ...value,
+                    date: e.target.value
+                  })
+                }
                 id="date"
                 title="date"
                 required
                 type="date"
               />
             </div>
-            <button className="button submit__button">Create</button>
+            <button
+              className={`button submit__button ${isLoading ? "disable" : ""}`}
+            >
+              {isLoading ? "Loading..." : "Create"}
+            </button>
           </form>
         </div>
       </div>

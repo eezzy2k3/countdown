@@ -42,6 +42,11 @@
   text-align: center;
 }
 
+h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
 .days p,
 .hours p,
 .mins p,
