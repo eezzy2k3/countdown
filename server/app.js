@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}))
 
 
 
-// imitializing Db
+// initializing Db
 const connectDb = require("./config/config")
 
 
@@ -25,7 +25,7 @@ connectDb()
 task.start()
 
 app.use("/api/v1/countdown", createRoute);
-app.use(errorHandler)
+app.use(errorHandler);
 
 const port = process.env.PORT || 3000
 
