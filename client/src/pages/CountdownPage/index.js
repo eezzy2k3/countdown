@@ -9,7 +9,7 @@ const CountdownPage = () => {
   return (
     <div className="countdown__container">
       <h1>{capitalEvent}</h1>
-      <div className="countdown flex">
+      <div className="countdown ">
         <div className="days">
           <span> 00 </span>
           <p> Days </p>
