@@ -27,7 +27,7 @@ chai.use(chaiHtpp);
      */
     describe('/POST countDown route', () => {
     it('it should POST the countdown status page', (done) => {
-        let event ={
+        let event = {
             "eventName": "christmas" ,
             "eventDescription":"christmas celebration",
             "eventDate":"25-december-2022"

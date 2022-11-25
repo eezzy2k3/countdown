@@ -12,10 +12,10 @@ const app = express()
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(errorHandler)
 
 
-// imitializing Db
+
+// initializing Db
 const connectDb = require("./config/config")
 
 
@@ -24,13 +24,13 @@ connectDb()
 
 task.start()
 
-app.use("/api/v1/countdown", createRoute)
-
+app.use("/api/v1/countdown", createRoute);
+app.use(errorHandler);
 
 const port = process.env.PORT || 3000
 
 app.listen(port,()=>{
- console.log(`app is listening on http://localhost:${port}`)
+ console.log(`app is listening on port :${port}`)
 })
 
 module.exports = app
