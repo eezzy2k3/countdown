@@ -94,7 +94,7 @@ input:focus {
 
 .button {
     border: none;
-    outline: none;
+    font-size: 2rem;
     color: #fff;
     padding: 1.4rem 4rem;
     border-radius: 1rem;

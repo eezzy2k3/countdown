@@ -13,6 +13,7 @@ const MainLayout = () => {
       style={{ backgroundImage: `url(${background})` }}
     >
       <Outlet />
+      <Footer />
     </div>
   );
 };

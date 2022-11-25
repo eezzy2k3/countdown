@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import "./CountdownPage.css";
-
 const CountdownPage = () => {
   const { event } = useParams();
   //Capitalize first letter of Event name
@@ -14,6 +13,7 @@ const CountdownPage = () => {
           <span> 00 </span>
           <p> Days </p>
         </div>
+      
         <div className="hours">
           <span> 00 </span>
           <p> Days </p>
