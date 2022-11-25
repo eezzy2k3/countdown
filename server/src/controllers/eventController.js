@@ -65,8 +65,8 @@ const getCountDown = async (req, res, next) => {
     .json({
       success: true,
       message: `This is the count down for ${event.eventName}, a ${event.eventDescription}`,
-      time: difference,
-    });
+      time: event.eventDate}
+    );
 };
 
 module.exports = { getCountDown, createCountDown };
