@@ -22,6 +22,18 @@ const Modal = ({ open, setOpen }) => {
 
   //call api for Creating Event
 
+//   const [nameInput, setNameInput] = useState('');
+//   const [dateInput, setDateInput] = useState('');
+
+
+//   const nameHandler = (e) => {
+// setNameInput(e.target.value);
+//   }
+
+//   const dateHandler = (e) => {
+//     setDateInput(e.target.value);
+//   }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // createEvents(value);
@@ -50,6 +62,10 @@ const Modal = ({ open, setOpen }) => {
       }
     };
     createEvents();
+
+
+    setValue
+
   };
   // const handleClose = () => {
   //   document.body.style.overflowY = "scroll";
@@ -71,8 +87,11 @@ const Modal = ({ open, setOpen }) => {
               <label htmlFor="name">Name:</label>
               <input
                 placeholder="Christmas"
+
                 value={value.name}
                 onChange={(e) => setValue({ ...value, name: e.target.value })}
+
+
                 id="name"
                 title="name"
                 required
@@ -94,6 +113,7 @@ const Modal = ({ open, setOpen }) => {
             <div className="event__date flex">
               <label htmlFor="date">Date:</label>
               <input
+
                 placeholder="Christmas"
                 value={value.date}
                 onChange={(e) =>
@@ -102,6 +122,7 @@ const Modal = ({ open, setOpen }) => {
                     date: e.target.value
                   })
                 }
+
                 id="date"
                 title="date"
                 required

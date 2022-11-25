@@ -10,7 +10,7 @@ const Home = () => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="home flex">
+    <div className="home ">
       <h1>
         {" "}
         Welcom<span>e to Coun</span>tDown

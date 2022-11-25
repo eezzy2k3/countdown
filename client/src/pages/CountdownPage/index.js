@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CountdownPage.css";
-
 const CountdownPage = () => {
   const { event } = useParams();
   //Capitalize first letter of Event name
@@ -57,12 +56,14 @@ const CountdownPage = () => {
   return (
     <div className="countdown__container">
       <h1>{capitalEvent}</h1>
+
       <h4>{data.message}</h4>
       <div className="countdown flex">
         <div className="days">
           <span> {days} </span>
           <p> Days </p>
         </div>
+      
         <div className="hours">
           <span> {hours} </span>
           <p> Hours </p>
