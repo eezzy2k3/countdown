@@ -96,6 +96,7 @@ input[type="date" i] {
     border-radius: 8px;
     border: 1px solid #cdcccc;
     padding: 1rem 2rem;
+    color: #000;
 }
 
 .event__name.flex,

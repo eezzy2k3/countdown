@@ -1,5 +1,7 @@
 .footer {
     font-size: 4rem;
+    position: absolute;
+    bottom: 10px;
 }
 
 .footer .icon {
@@ -7,4 +9,5 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    cursor: pointer;
 }
