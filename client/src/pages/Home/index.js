@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import clock from "../../assets/images/cl.png";
 import alarm from "../../assets/images/clock.png";
@@ -7,6 +8,7 @@ import "./Home.css";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="home ">
       <h1>
@@ -15,7 +17,7 @@ const Home = () => {
       </h1>
       <h3> Where We help you countdown to special Events</h3>
       <button className="button add__button" onClick={() => setOpenModal(true)}>
-        Add Event +
+        Create New Countdown +
       </button>
 
       <img className="clock" alt="clock" src={clock} />
