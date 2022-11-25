@@ -12,7 +12,7 @@ const app = express()
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(errorHandler)
+
 
 
 // imitializing Db
@@ -24,8 +24,8 @@ connectDb()
 
 task.start()
 
-app.use("/api/v1/countdown", createRoute)
-
+app.use("/api/v1/countdown", createRoute);
+app.use(errorHandler)
 
 const port = process.env.PORT || 3000
 
