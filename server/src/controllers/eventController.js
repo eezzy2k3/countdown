@@ -45,7 +45,7 @@ const createCountDown = async (req, res, next) => {
         countdown,
       });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    return res.status(500).json({ success: false, message: error.message });
   }
 };
 
@@ -60,7 +60,7 @@ const getCountDown = async (req, res, next) => {
   const difference = (eventDate - todaysDate) / 1000;
 
   if (difference < 0) return next(new ErrorResponse("event has occurred", 400));
-  res
+  return res
     .status(200)
     .json({
       success: true,

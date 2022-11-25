@@ -22,24 +22,3 @@ chai.use(chaiHtpp);
     });
 
 
-    /**
-     * Post request
-     */
-    describe('/POST countDown route', () => {
-    it('it should POST the countdown status page', (done) => {
-        let event = {
-            "eventName": "christmas" ,
-            "eventDescription":"christmas celebration",
-            "eventDate":"25-december-2022"
-        }
-        chai.request(server)
-            .post(`/api/v1/countDown/${event.eventName}`)
-            .send({event: event})
-            .end((err, res) => {
-            res.should.have.status(200);
-            res.body.should.be.a('object');
-            done();
-        });
-    })
-    });
-
